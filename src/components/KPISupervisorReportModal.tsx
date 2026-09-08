@@ -59,7 +59,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
   const [note, setNote] = useState(() => {
     return (
       localStorage.getItem('kpi_rep_note') ||
-      'Все смены отработаны по графику в Sherlock, стандарты обслуживания ОКК соблюдены, штрафов нет. Прошу согласовать расчёт.'
+      'Все смены отработаны по графику в «Ирис», стандарты обслуживания ОКК соблюдены, штрафов нет. Прошу согласовать расчёт.'
     );
   });
 
@@ -84,7 +84,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
     if (data.mode === 'month1') {
       return {
         title: '1-й месяц (Адаптация)',
-        desc: 'Фиксированная почасовая ставка 160 ₽/ч'
+        desc: 'Фиксированная почасовая ставка 150 ₽/ч'
       };
     }
     const matched = KPI_RATES.slice().reverse().find((r) => data.chatsPerHour >= r.chatsPerHour);
@@ -107,7 +107,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
     const divider = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
     const lines = [
       '📋 ОТЧЁТ ПО ВЫРАБОТКЕ И KPI ОПЕРАТОРА ЧАТА',
-      'Проект: «Золотое Яблоко» (ООО «Телесейлз-Сервис»)',
+      'Проект: «Аврелия» (ООО «Диалог Сервис»)',
       divider,
       `👤 Оператор: ${operatorName.trim() || 'Оператор чат-линии'}${operatorId.trim() ? ` (ID/Табель: ${operatorId.trim()})` : ''}`,
       `📅 Расчётный период: ${period}`,
@@ -116,13 +116,13 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
       `📆 Дата формирования: ${currentDateFormatted}`,
       divider,
       '📊 ОПЕРАЦИОННЫЕ МЕТРИКИ:',
-      `• Модель расчёта: ${data.mode === 'month1' ? '1-й месяц (фикс 160 ₽/час)' : 'Со 2-го месяца (сдельная по ЧвЧ)'}`,
+      `• Модель расчёта: ${data.mode === 'month1' ? '1-й месяц (фикс 150 ₽/час)' : 'Со 2-го месяца (сдельная по ЧвЧ)'}`,
       `• Отработано часов: ${data.hours} ч (эквивалентно ~${shiftsCount} смен по 12 ч)`,
       `• Закрыто диалогов (чатов): ${data.chats.toLocaleString('ru-RU')}`,
       `• Скорость закрытия (ЧвЧ): ${data.chatsPerHour.toFixed(1)} чатов/час`,
       `• Средняя выработка за смену: ~${avgChatsPerShift} чатов`,
       `• Тарифный грейд: ${gradeInfo.title}`,
-      `• Ставка за диалог: ${data.mode === 'month1' ? '160 ₽/час' : `${data.ratePerChat} ₽ / чат`}`,
+      `• Ставка за диалог: ${data.mode === 'month1' ? '150 ₽/час' : `${data.ratePerChat} ₽ / чат`}`,
       divider,
       '💰 ФИНАНСОВЫЙ РАСЧЁТ (Самозанятость / НПД):',
       `• Валовое начисление: ${Math.round(data.grossSalary).toLocaleString('ru-RU')} ₽ (до налога)`,
@@ -358,7 +358,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
   <div class="header">
     <div class="header-title">
       <h1>Отчёт по выработке и расчёту KPI</h1>
-      <div class="subtitle">Проект «Золотое Яблоко» • ООО «Телесейлз-Сервис» • Линия чат-поддержки</div>
+      <div class="subtitle">Проект «Аврелия» • ООО «Диалог Сервис» • Линия чат-поддержки</div>
     </div>
     <div>
       <span class="badge">${period}</span>
@@ -390,7 +390,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
       <div class="card-title">Параметры тарификации</div>
       <div class="row">
         <span class="lbl">Режим расчёта:</span>
-        <span class="val">${data.mode === 'month1' ? '1-й месяц (160 ₽/ч)' : 'Со 2-го месяца (сдельный)'}</span>
+        <span class="val">${data.mode === 'month1' ? '1-й месяц (150 ₽/ч)' : 'Со 2-го месяца (сдельный)'}</span>
       </div>
       <div class="row">
         <span class="lbl">Тарифный грейд:</span>
@@ -398,7 +398,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
       </div>
       <div class="row">
         <span class="lbl">Ставка за диалог:</span>
-        <span class="val">${data.mode === 'month1' ? '160 ₽/час' : data.ratePerChat + ' ₽/чат'}</span>
+        <span class="val">${data.mode === 'month1' ? '150 ₽/час' : data.ratePerChat + ' ₽/чат'}</span>
       </div>
       <div class="row">
         <span class="lbl">Налогообложение:</span>
@@ -424,7 +424,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
       <tr>
         <td>Всего закрытых диалогов (чатов)</td>
         <td class="num">${data.chats.toLocaleString('ru-RU')}</td>
-        <td>Успешно завершённые обращения в Sherlock</td>
+        <td>Успешно завершённые обращения в «Ирис»</td>
       </tr>
       <tr>
         <td>Интенсивность / скорость (ЧвЧ)</td>
@@ -451,7 +451,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
       <tr>
         <td>Валовое начисление (до налога)</td>
         <td class="num">${Math.round(data.grossSalary).toLocaleString('ru-RU')} ₽</td>
-        <td>${data.mode === 'month1' ? `${data.hours} ч × 160 ₽` : `${data.chats} чатов × ${data.ratePerChat} ₽`}</td>
+        <td>${data.mode === 'month1' ? `${data.hours} ч × 150 ₽` : `${data.chats} чатов × ${data.ratePerChat} ₽`}</td>
       </tr>
       <tr>
         <td>Налог самозанятого (НПД 4%)</td>
@@ -601,7 +601,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
 
               <div>
                 <label className="block text-[11px] font-medium text-[#6B7280] mb-1">
-                  Табельный номер / ID Sherlock
+                  Табельный номер / ID «Ирис»
                 </label>
                 <input
                   type="text"
@@ -660,7 +660,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
               </label>
               <input
                 type="text"
-                placeholder="Смены отработаны согласно графику в Sherlock, стандарты обслуживания ОКК соблюдены..."
+                placeholder="Смены отработаны согласно графику в «Ирис», стандарты обслуживания ОКК соблюдены..."
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 className="w-full px-3 py-1.5 text-xs bg-white border border-[#E5E7EB] rounded-xl outline-none focus:border-[#84CC16]"
@@ -737,7 +737,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
                     Отчёт по выработке и расчёту KPI
                   </h3>
                   <p className="text-xs text-[#6B7280] mt-0.5">
-                    Проект «Золотое Яблоко» • ООО «Телесейлз-Сервис» • Чат-поддержка клиентов
+                    Проект «Аврелия» • ООО «Диалог Сервис» • Чат-поддержка клиентов
                   </p>
                 </div>
                 <div className="px-3 py-1 bg-[#F3F4F6] border border-[#E5E7EB] rounded-lg font-mono text-xs font-bold text-[#1E201E]">
@@ -772,7 +772,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
                   <div className="flex justify-between">
                     <span className="text-[#6B7280]">Режим:</span>
                     <span className="font-bold text-[#1E201E]">
-                      {data.mode === 'month1' ? '1-й месяц (фикс 160 ₽/ч)' : 'Со 2-го месяца (сдельный KPI)'}
+                      {data.mode === 'month1' ? '1-й месяц (фикс 150 ₽/ч)' : 'Со 2-го месяца (сдельный KPI)'}
                     </span>
                   </div>
                   <div className="flex justify-between">
@@ -816,7 +816,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
                           {data.chats.toLocaleString('ru-RU')}
                         </td>
                         <td className="py-2.5 px-3 text-[#6B7280] hidden sm:table-cell">
-                          Зафиксировано в системе Sherlock
+                          Зафиксировано в системе «Ирис»
                         </td>
                       </tr>
                       <tr className="bg-[#F7FEE7]">
@@ -833,10 +833,10 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
                       <tr>
                         <td className="py-2.5 px-3 font-medium">Ставка за единицу</td>
                         <td className="py-2.5 px-3 font-mono font-bold text-right text-sm text-[#65A30D]">
-                          {data.mode === 'month1' ? '160 ₽ / час' : `${data.ratePerChat} ₽ / чат`}
+                          {data.mode === 'month1' ? '150 ₽ / час' : `${data.ratePerChat} ₽ / чат`}
                         </td>
                         <td className="py-2.5 px-3 text-[#6B7280] hidden sm:table-cell">
-                          Согласно тарифной сетке «Золотое Яблоко»
+                          Согласно тарифной сетке «Аврелия»
                         </td>
                       </tr>
                     </tbody>
@@ -920,7 +920,7 @@ export const KPISupervisorReportModal: React.FC<KPISupervisorReportModalProps> =
                     {supervisorName}
                   </div>
                   <div className="text-[10px] text-[#9CA3AF] mt-1">
-                    Согласование и проверка в Sherlock
+                    Согласование и проверка в «Ирис»
                   </div>
                 </div>
               </div>

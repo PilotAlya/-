@@ -95,7 +95,7 @@ function DatabaseAppContent() {
       </main>
 
       <footer className="hidden lg:block border-t border-[#E5E7EB] bg-white py-4 px-6 text-center text-xs text-[#9CA3AF]">
-        База данных оператора поддержки · ООО «Телесейлз-Сервис» для сети «Золотое Яблоко» · Все данные сохранены локально
+        База данных оператора поддержки · ООО «Диалог Сервис» для сети «Аврелия» · Все данные сохранены локально
       </footer>
 
       {/* Mobile Bottom Navigation */}

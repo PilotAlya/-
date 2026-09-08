@@ -44,7 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         {/* Brand */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#9AE600] to-[#72B600] text-white flex items-center justify-center font-extrabold text-sm sm:text-base shadow-sm border border-lime-600/20 shrink-0">
-            <span className="font-['Manrope'] font-black tracking-tighter">ЗЯ</span>
+            <span className="font-['Manrope'] font-black tracking-tighter">АВ</span>
           </div>
           <div>
             <div className="flex items-center gap-1.5 sm:gap-2">
@@ -52,7 +52,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 База поддержки
               </h1>
               <span className="hidden md:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-semibold bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0]">
-                <Database className="w-3 h-3" /> Золотое Яблоко
+                <Database className="w-3 h-3" /> Аврелия
               </span>
             </div>
             <p className="text-[10px] sm:text-xs text-[#6B7280]">

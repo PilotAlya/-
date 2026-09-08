@@ -13,7 +13,7 @@ export const Sidebar: React.FC = () => {
     { id: 'favorites', label: 'Избранное', icon: Heart, count: totalFavorites, isSpecialFav: true },
     { id: 'cheatsheet', label: 'Шпаргалка систем', icon: KeyRound, count: 8 },
     { id: 'calendar', label: 'Календарь смен', icon: Calendar },
-    { id: 'scripts', label: 'Скрипты Sherlock', icon: MessageSquare, count: scripts.length },
+    { id: 'scripts', label: 'Скрипты «Ирис»', icon: MessageSquare, count: scripts.length },
     { id: 'schemes', label: 'Схемы и развилки', icon: GitFork, count: 3 },
     { id: 'kpi', label: 'KPI и Зарплата', icon: Calculator },
     { id: 'glossary', label: 'Глоссарий терминов', icon: BookA, count: glossary.length },

@@ -28,11 +28,11 @@ export const KPICalculator: React.FC = () => {
     if (hours <= 0) return { chatsPerHour: 0, ratePerChat: 0, grossSalary: 0, netSalary: 0, taxAmount: 0 };
 
     if (mode === 'month1') {
-      const gross = hours * 160;
+      const gross = hours * 150;
       const tax = gross * 0.04;
       return {
         chatsPerHour: chats / hours,
-        ratePerChat: 160 / (chats / hours || 1),
+        ratePerChat: 150 / (chats / hours || 1),
         grossSalary: gross,
         netSalary: gross - tax,
         taxAmount: tax
@@ -65,13 +65,13 @@ export const KPICalculator: React.FC = () => {
     const divider = '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━';
     const text = [
       '📋 ОТЧЁТ ПО ВЫРАБОТКЕ И KPI ОПЕРАТОРА ЧАТА',
-      'Проект: «Золотое Яблоко» (ООО «Телесейлз-Сервис»)',
+      'Проект: «Аврелия» (ООО «Диалог Сервис»)',
       divider,
-      `• Модель расчёта: ${mode === 'month1' ? '1-й месяц (фикс 160 ₽/ч)' : 'Со 2-го месяца (сдельная по ЧвЧ)'}`,
+      `• Модель расчёта: ${mode === 'month1' ? '1-й месяц (фикс 150 ₽/ч)' : 'Со 2-го месяца (сдельная по ЧвЧ)'}`,
       `• Отработано часов: ${hours} ч (~${(hours / 12).toFixed(1)} смен по 12 ч)`,
       `• Закрыто диалогов: ${chats.toLocaleString('ru-RU')}`,
       `• Скорость закрытия (ЧвЧ): ${chatsPerHour.toFixed(1)} чатов/час`,
-      `• Ставка за диалог: ${mode === 'month1' ? '160 ₽/ч' : `${ratePerChat} ₽ / чат`}`,
+      `• Ставка за диалог: ${mode === 'month1' ? '150 ₽/ч' : `${ratePerChat} ₽ / чат`}`,
       divider,
       `• Валовый доход (до налога): ${Math.round(grossSalary).toLocaleString('ru-RU')} ₽`,
       `• Налог НПД (4%): ${Math.round(taxAmount).toLocaleString('ru-RU')} ₽`,
@@ -97,7 +97,7 @@ export const KPICalculator: React.FC = () => {
             </h2>
           </div>
           <p className="text-xs text-[#6B7280] mt-1">
-            Официальная тарифная сетка «Телесейлз-Сервис» (проект «Золотое Яблоко»)
+            Официальная тарифная сетка «Диалог Сервис» (проект «Аврелия»)
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export const KPICalculator: React.FC = () => {
                 mode === 'month1' ? 'bg-[#1E201E] text-white shadow-2xs' : 'text-[#4B5563] hover:text-[#1E201E]'
               }`}
             >
-              1-й месяц (160 ₽/ч)
+              1-й месяц (150 ₽/ч)
             </button>
           </div>
 
@@ -202,7 +202,7 @@ export const KPICalculator: React.FC = () => {
             <div className="p-3.5 rounded-xl bg-[#F9FAFB] border border-[#E5E7EB]">
               <div className="text-[11px] text-[#6B7280]">Ставка за чат</div>
               <div className="text-xl font-extrabold text-[#65A30D] font-mono mt-1">
-                {mode === 'month1' ? '160 ₽/ч' : `${ratePerChat} ₽`}
+                {mode === 'month1' ? '150 ₽/ч' : `${ratePerChat} ₽`}
               </div>
             </div>
 

@@ -264,7 +264,7 @@ export const RecordModal: React.FC<RecordModalProps> = ({
                   type === 'script' ? 'bg-white text-[#1E201E] shadow-2xs' : 'text-[#6B7280]'
                 }`}
               >
-                Скрипт Sherlock
+                Скрипт «Ирис»
               </button>
               <button
                 type="button"

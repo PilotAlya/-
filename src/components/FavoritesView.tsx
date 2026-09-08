@@ -164,7 +164,7 @@ export const FavoritesView: React.FC<FavoritesViewProps> = ({
                 </span>
               </div>
               <p className="text-xs text-[#6B7280]">
-                Личный список быстрого доступа: статьи регламентов и скрипты Sherlock в 1 клик
+                Личный список быстрого доступа: статьи регламентов и скрипты «Ирис» в 1 клик
               </p>
             </div>
           </div>
@@ -551,7 +551,7 @@ export const FavoritesView: React.FC<FavoritesViewProps> = ({
                                 </>
                               ) : (
                                 <>
-                                  <Copy className="w-4 h-4" /> Скопировать для Sherlock
+                                  <Copy className="w-4 h-4" /> Скопировать для «Ирис»
                                 </>
                               )}
                             </button>

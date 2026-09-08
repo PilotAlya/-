@@ -63,8 +63,8 @@ const CATEGORY_FILTER_PRESETS = [
   { tag: 'промокоды', label: 'Промокоды 🏷️' },
   { tag: 'лояльность', label: 'Лояльность ⭐' },
   { tag: 'бонусы', label: 'Бонусы ✨' },
-  { tag: 'аксапта', label: 'Axapta 🖥️' },
-  { tag: 'sherlock', label: 'Шерлок 🔍' },
+  { tag: 'нексус', label: 'Нексус 🖥️' },
+  { tag: 'ирис', label: 'Ирис 🔍' },
   { tag: 'казахстан', label: 'Казахстан 🇰🇿' },
   { tag: 'беларусь', label: 'Беларусь 🇧🇾' },
   { tag: 'претензии', label: 'Претензии ⚖️' }

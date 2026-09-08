@@ -14,8 +14,8 @@ export default defineConfig(() => {
         includeAssets: ['icon.svg', 'apple-touch-icon.png', 'pwa-192x192.png', 'pwa-512x512.png'],
         manifest: {
           id: '/',
-          name: 'База данных оператора — Золотое Яблоко',
-          short_name: 'Телесейлз БД',
+          name: 'База данных оператора — Аврелия',
+          short_name: 'Аврелия БД',
           description: 'База данных и знаний оператора поддержки: статьи, скрипты, регламенты, схемы и расчет KPI',
           theme_color: '#1E201E',
           background_color: '#FBFBFA',

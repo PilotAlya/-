@@ -15,7 +15,7 @@
   <!-- Subtle inner border for polish -->
   <rect x="16" y="16" width="480" height="480" rx="104" fill="none" stroke="#FFFFFF" stroke-width="8" opacity="0.2"/>
 
-  <!-- White Letters ЗЯ -->
+  <!-- White Letters АВ -->
   <g filter="url(#subtleShadow)">
     <text
       x="256"
@@ -26,6 +26,6 @@
       font-size="240"
       fill="#FFFFFF"
       letter-spacing="-6"
-    >ЗЯ</text>
+    >АВ</text>
   </g>
 </svg>

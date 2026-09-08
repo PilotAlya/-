@@ -52,7 +52,7 @@ interface DatabaseContextType {
   importDatabaseJson: (jsonString: string) => boolean;
 }
 
-const STORAGE_KEY = 'telesales_operator_database_v1';
+const STORAGE_KEY = 'aurelia_operator_database_v1';
 
 const DatabaseContext = createContext<DatabaseContextType | undefined>(undefined);
 

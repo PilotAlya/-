@@ -138,7 +138,7 @@ export const ScriptTagAssignModal: React.FC<ScriptTagAssignModalProps> = ({
                 {script.categoryLabel}
               </span>
               <span className="text-xs text-[#6B7280] font-medium truncate">
-                Скрипт Sherlock
+                Скрипт «Ирис»
               </span>
             </div>
             <h3 className="text-base font-bold text-[#1E201E] truncate font-['Manrope']">

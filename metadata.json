@@ -1,5 +1,5 @@
 {
-  "name": "База данных оператора — Золотое Яблоко",
+  "name": "База данных оператора — Аврелия",
   "description": "Интерактивная база данных и знаний оператора поддержки: статьи, скрипты, регламенты, схемы, расчет KPI и календарь смен с шаблонами",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

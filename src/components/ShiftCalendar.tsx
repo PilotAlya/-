@@ -28,8 +28,8 @@ import {
 } from 'lucide-react';
 import { DayShift, ShiftTemplate } from '../types';
 
-const STORAGE_SHIFTS_KEY = 'telesales_shift_calendar_v1';
-const STORAGE_TEMPLATES_KEY = 'telesales_shift_templates_v2';
+const STORAGE_SHIFTS_KEY = 'aurelia_shift_calendar_v1';
+const STORAGE_TEMPLATES_KEY = 'aurelia_shift_templates_v2';
 
 const MONTH_NAMES = [
   'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
@@ -251,7 +251,7 @@ export const ShiftCalendar: React.FC = () => {
 
     const normHours = 165;
     const progressPercent = Math.min(Math.round((totalHours / normHours) * 100), 120);
-    const baseEstimatedPay = totalHours * 160;
+    const baseEstimatedPay = totalHours * 150;
 
     return {
       totalHours,
@@ -435,7 +435,7 @@ export const ShiftCalendar: React.FC = () => {
 • Рабочих смен: ${summary.workDaysCount}
 • Дней отдыха 🌴: ${summary.daysOffCount}
 ${summary.extraHours > 0 ? `• Доп. часы (переработки): ${summary.extraHours} ч\n` : ''}• Оценка по ставке: ~${summary.baseEstimatedPay.toLocaleString('ru-RU')} ₽ (без учета KPI чатов)
-Сформировано в базе «Золотое Яблоко» (Телесейлз)`;
+Сформировано в базе «Аврелия» (Диалог Сервис)`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -673,7 +673,7 @@ ${summary.extraHours > 0 ? `• Доп. часы (переработки): ${sum
               ~{summary.baseEstimatedPay.toLocaleString('ru-RU')} <span className="text-sm font-normal text-[#4D7C0F]">₽</span>
             </div>
             <div className="text-[10px] text-[#4D7C0F] mt-1 leading-tight font-medium">
-              По тарифу 160 ₽/ч (без учета премии за скорость чатов)
+              По тарифу 150 ₽/ч (без учета премии за скорость чатов)
             </div>
           </div>
         </div>
@@ -851,13 +851,13 @@ ${summary.extraHours > 0 ? `• Доп. часы (переработки): ${sum
         </div>
       </div>
 
-      {/* Sherlock shift reminder */}
+      {/* Iris shift reminder */}
       <div className="p-4 rounded-2xl bg-[#FFFBEB] border border-[#FCD34D] flex items-start gap-3 text-xs text-[#92400E]">
         <Info className="w-4 h-4 text-[#D97706] shrink-0 mt-0.5" />
         <div>
-          <span className="font-bold text-[#B45309]">Правило работы с часами в Шерлоке:</span>
+          <span className="font-bold text-[#B45309]">Правило работы с часами в «Ирис»:</span>
           <p className="mt-0.5 leading-relaxed text-[#78350F]">
-            В программе «Шерлок» выставляйте время смены <strong>строго по своему часовому поясу</strong>. Конец вашей реальной смены должен совпадать со временем в Шерлоке. При доп. часах реальное окончание также выставляется равным Шерлоку!
+            В программе «Ирис» выставляйте время смены <strong>строго по своему часовому поясу</strong>. Конец вашей реальной смены должен совпадать со временем в «Ирис». При доп. часах реальное окончание также выставляется равным «Ирис»!
           </p>
         </div>
       </div>

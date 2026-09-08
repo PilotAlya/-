@@ -53,9 +53,9 @@ export const TAG_PRESETS: TagPreset[] = [
   { tag: 'возврат', label: 'Возврат средств', type: 'category', icon: RotateCcw, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
   { tag: 'промокоды', label: 'Промокоды / Скидки', type: 'category', icon: Percent, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
   { tag: 'лояльность', label: 'Карта лояльности', type: 'category', icon: Star, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
-  { tag: 'бонусы', label: 'Бонусы ЗЯ', type: 'category', icon: Star, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
-  { tag: 'аксапта', label: 'Axapta (Аксапта)', type: 'category', icon: Monitor, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
-  { tag: 'sherlock', label: 'Шерлок (Sherlock)', type: 'category', icon: Monitor, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
+  { tag: 'бонусы', label: 'Бонусы АВ', type: 'category', icon: Star, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
+  { tag: 'нексус', label: '«Нексус» (ERP)', type: 'category', icon: Monitor, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
+  { tag: 'ирис', label: '«Ирис» (Iris)', type: 'category', icon: Monitor, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
   { tag: 'казахстан', label: 'Казахстан (KZ)', type: 'category', icon: Globe, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' },
   { tag: 'беларусь', label: 'Беларусь (BY)', type: 'category', icon: Globe, colorClass: 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100' }
 ];

@@ -180,7 +180,7 @@ export const PhoneSyncModal: React.FC<PhoneSyncModalProps> = ({ isOpen, onClose 
                   <span className="w-5 h-5 rounded-full bg-[#E5E7EB] text-[#1E201E] font-bold flex items-center justify-center shrink-0 text-[10px]">
                     4
                   </span>
-                  <span>Нажмите «Добавить». Иконка базы «ЗЯ» появится на рабочем столе телефона!</span>
+                  <span>Нажмите «Добавить». Иконка базы «АВ» появится на рабочем столе телефона!</span>
                 </div>
               </div>
             )}
@@ -231,7 +231,7 @@ export const PhoneSyncModal: React.FC<PhoneSyncModalProps> = ({ isOpen, onClose 
                   <span className="w-5 h-5 rounded-full bg-[#E5E7EB] text-[#1E201E] font-bold flex items-center justify-center shrink-0 text-[10px]">
                     2
                   </span>
-                  <span>База откроется в отдельном ультра-быстром окне без лишних вкладок и рамок, её можно закрепить на панели задач Windows рядом с VDI и Sherlock!</span>
+                  <span>База откроется в отдельном ультра-быстром окне без лишних вкладок и рамок, её можно закрепить на панели задач Windows рядом с VDI и «Ирис»!</span>
                 </div>
               </div>
             )}

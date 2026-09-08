@@ -28,7 +28,7 @@ export const ExportImportModal: React.FC<ExportImportModalProps> = ({ isOpen, on
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `telesales-goldapple-database-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `aurelia-support-database-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };

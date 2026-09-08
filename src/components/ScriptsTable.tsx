@@ -576,7 +576,7 @@ export const ScriptsTable: React.FC<ScriptsTableProps> = ({ onEditScript }) => {
                         </>
                       ) : (
                         <>
-                          <Copy className="w-4 h-4" /> Скопировать для Sherlock
+                          <Copy className="w-4 h-4" /> Скопировать для «Ирис»
                         </>
                       )}
                     </button>

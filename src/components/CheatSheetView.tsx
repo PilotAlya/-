@@ -42,7 +42,7 @@ export const CheatSheetView: React.FC = () => {
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [checkedSystems, setCheckedSystems] = useState<Record<string, boolean>>(() => {
     try {
-      const saved = localStorage.getItem('telesales_morning_checklist');
+      const saved = localStorage.getItem('aurelia_morning_checklist');
       return saved ? JSON.parse(saved) : {};
     } catch {
       return {};
@@ -51,7 +51,7 @@ export const CheatSheetView: React.FC = () => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('telesales_morning_checklist', JSON.stringify(checkedSystems));
+      localStorage.setItem('aurelia_morning_checklist', JSON.stringify(checkedSystems));
     } catch {
       // ignore
     }
@@ -75,11 +75,11 @@ export const CheatSheetView: React.FC = () => {
     {
       id: 'vdi',
       stepNumber: 1,
-      name: 'VDI MTS (Удалённый рабочий стол)',
+      name: 'VDI (Удалённый рабочий стол)',
       shortDesc: 'Основной виртуальный рабочий стол оператора',
       badge: 'Шаг 1 — Главный вход',
-      url: 'https://vdi-outcc.cloud.mts.ru/appblast/webclient/#/home',
-      urlDisplay: 'vdi-outcc.cloud.mts.ru/.../#/home',
+      url: 'https://vdi.aurelia-corp.example/webclient/#/home',
+      urlDisplay: 'vdi.aurelia-corp.example/.../#/home',
       loginFormat: 'Логин: свой',
       passwordFormat: '1-й шаг: 🔑 цифры из ключа (OTP) | 2-й шаг: свой пароль учетки',
       actions: [
@@ -94,8 +94,8 @@ export const CheatSheetView: React.FC = () => {
       stepNumber: 2,
       name: 'Почта Outlook',
       shortDesc: 'Корпоративная электронная почта для писем и регламентов',
-      url: 'https://owa.goldapple.ru',
-      urlDisplay: 'owa.goldapple.ru',
+      url: 'https://owa.aurelia-corp.example',
+      urlDisplay: 'owa.aurelia-corp.example',
       loginFormat: 'Логин: свой',
       passwordFormat: 'Пароль: свой',
       actions: ['Проверяем входящие письма, рассылки от супервизоров и доступы к системам'],
@@ -127,14 +127,14 @@ export const CheatSheetView: React.FC = () => {
       icon: Layers
     },
     {
-      id: 'axapta',
+      id: 'nexus',
       stepNumber: 5,
-      name: 'Axapta (Аксапта)',
+      name: '«Нексус»',
       shortDesc: 'ERP-система учета заказов, складов и финансовых проводок',
-      loginFormat: 'Логин@goldapple.ru',
+      loginFormat: 'Логин@aurelia-corp.example',
       passwordFormat: 'Пароль: свой',
       actions: [
-        'Обязательно дописываем домен: @goldapple.ru',
+        'Обязательно дописываем домен: @aurelia-corp.example',
         'Используется для проверки резервов складов, чеков и детальных статусов'
       ],
       icon: FileSpreadsheet
@@ -144,15 +144,15 @@ export const CheatSheetView: React.FC = () => {
       stepNumber: 6,
       name: 'Service Desk (SD)',
       shortDesc: 'Система заявок и эскалации на смежные отделы',
-      loginFormat: 'Логин@goldapple.ru',
+      loginFormat: 'Логин@aurelia-corp.example',
       passwordFormat: 'Пароль: свой',
       actions: ['Для создания тикетов на IT, логистику, склады и старших специалистов'],
       icon: Headphones
     },
     {
-      id: 'zk',
+      id: 'polus',
       stepNumber: 7,
-      name: 'Золотая Корона (ЗК)',
+      name: '«Полюс» (ПЛ)',
       shortDesc: 'Проведение и проверка возвратов денежных средств',
       badge: 'КРИТИЧЕСКИЙ РЕЖИМ',
       critical: true,
@@ -165,22 +165,22 @@ export const CheatSheetView: React.FC = () => {
         '4. Нажимаем стрелочку вверху'
       ],
       warning:
-        'ОШИБКА 5 РАЗ БЛОКИРУЕТ ЗК У ВСЕХ ОПЕРАТОРОВ! Делаем не более 2-3 попыток. Копируйте пароль через Copy без пробелов. Не заходит — сразу пишите супервизору!',
+        'ОШИБКА 5 РАЗ БЛОКИРУЕТ ПЛ У ВСЕХ ОПЕРАТОРОВ! Делаем не более 2-3 попыток. Копируйте пароль через Copy без пробелов. Не заходит — сразу пишите супервизору!',
       icon: Coins
     },
     {
-      id: 'sherlock',
+      id: 'iris',
       stepNumber: 8,
-      name: 'Шерлок (Sherlock)',
+      name: '«Ирис» (Iris)',
       shortDesc: 'Рабочий чат-терминал с клиентами и готовыми шаблонами',
       badge: 'В ПОСЛЕДНЮЮ ОЧЕРЕДЬ!',
       priorityOrder: 'Запускаем строго после проверки всех остальных систем!',
       loginFormat: 'Логин: свой',
       passwordFormat: 'Пароль: из письма',
       actions: [
-        'Заходим в Шерлок в самую последнюю очередь перед стартом линии!',
+        'Заходим в «Ирис» в самую последнюю очередь перед стартом линии!',
         'Смена: выставляем время смены строго ПО СВОЕМУ ЧАСОВОМУ ПОЯСУ',
-        'Конец вашей фактической смены обязан совпадать с концом смены в Шерлоке',
+        'Конец вашей фактической смены обязан совпадать с концом смены в «Ирис»',
         'Доп. часы: выставляем смену так, чтобы окончание совпадало по факту (на начало смены можно не смотреть)'
       ],
       icon: MessageSquare
@@ -205,24 +205,24 @@ export const CheatSheetView: React.FC = () => {
             </h2>
             <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
               Ссылки, форматы логинов и паролей, алгоритм запуска перед сменой и критические правила безопасности
-              для «Золотой Короны» и «Шерлока».
+              для «Полюса» и «Ирис».
             </p>
           </div>
 
           <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0">
             <a
-              href="https://vdi-outcc.cloud.mts.ru/appblast/webclient/#/home"
+              href="https://vdi.aurelia-corp.example/webclient/#/home"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#84CC16] hover:bg-[#65A30D] active:bg-[#4D7C0F] text-[#1E201E] font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xs"
             >
-              <span>Открыть VDI MTS</span>
+              <span>Открыть VDI</span>
               <ExternalLink className="w-4 h-4" />
             </a>
             <button
               onClick={() =>
                 copyText(
-                  'https://vdi-outcc.cloud.mts.ru/appblast/webclient/#/home',
+                  'https://vdi.aurelia-corp.example/webclient/#/home',
                   'hero_vdi'
                 )
               }
@@ -258,7 +258,7 @@ export const CheatSheetView: React.FC = () => {
         </div>
       </div>
 
-      {/* Critical Alert 1: ЗОЛОТАЯ КОРОНА */}
+      {/* Critical Alert 1: ПОЛЮС */}
       <div className="bg-[#FEF2F2] border-2 border-[#EF4444] rounded-3xl p-5 sm:p-6 shadow-xs relative overflow-hidden">
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#EF4444] text-white flex items-center justify-center shrink-0 shadow-md">
@@ -270,13 +270,13 @@ export const CheatSheetView: React.FC = () => {
                 КРИТИЧЕСКОЕ ПРАВИЛО ЛИНИИ
               </span>
               <h3 className="text-base sm:text-lg font-bold text-[#991B1B] font-['Manrope']">
-                Памятка при входе в «Золотую Корону» (ЗК)
+                Памятка при входе в «Полюс» (ПЛ)
               </h3>
             </div>
 
             <div className="space-y-1.5 text-xs sm:text-sm text-[#7F1D1D] leading-relaxed">
               <p className="font-bold text-[#B91C1C]">
-                ⚠️ Всего дается 5 попыток для ввода верного пароля! После 5 неверных попыток ЗК блокируется У ВСЕХ операторов!
+                ⚠️ Всего дается 5 попыток для ввода верного пароля! После 5 неверных попыток ПЛ блокируется У ВСЕХ операторов!
               </p>
               <p>
                 • <strong>Правило:</strong> вводить не более <strong>2–3 попыток</strong>. Если на 2-й раз не заходит — остановитесь, не блокируйте коллег!
@@ -292,7 +292,7 @@ export const CheatSheetView: React.FC = () => {
         </div>
       </div>
 
-      {/* Critical Alert 2: ШЕРЛОК */}
+      {/* Critical Alert 2: ИРИС */}
       <div className="bg-[#FFFBEB] border-2 border-[#F59E0B] rounded-3xl p-5 sm:p-6 shadow-xs">
         <div className="flex items-start gap-4">
           <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#F59E0B] text-white flex items-center justify-center shrink-0 shadow-md">
@@ -304,22 +304,22 @@ export const CheatSheetView: React.FC = () => {
                 СТРОГО В ПОСЛЕДНЮЮ ОЧЕРЕДЬ
               </span>
               <h3 className="text-base sm:text-lg font-bold text-[#92400E] font-['Manrope']">
-                Памятка при входе в «Шерлок» (Sherlock)
+                Памятка при входе в «Ирис» (Iris)
               </h3>
             </div>
 
             <div className="space-y-1.5 text-xs sm:text-sm text-[#78350F] leading-relaxed">
               <p>
-                • <strong>Очередность:</strong> заходим в Шерлок <strong>в самую последнюю очередь</strong>, когда VDI, Outlook, ЕО, Аксапта и ЗК уже запущены и проверены.
+                • <strong>Очередность:</strong> заходим в «Ирис» <strong>в самую последнюю очередь</strong>, когда VDI, Outlook, ЕО, «Нексус» и ПЛ уже запущены и проверены.
               </p>
               <p>
                 • <strong>Часовой пояс:</strong> выставляем время смены строго <strong>ПО СВОЕМУ ЧАСОВОМУ ПОЯСУ</strong>.
               </p>
               <p>
-                • <strong>Конец смены:</strong> окончание смены по факту ОБЯЗАНО совпадать с окончанием смены в «Шерлоке» по вашему времени.
+                • <strong>Конец смены:</strong> окончание смены по факту ОБЯЗАНО совпадать с окончанием смены в «Ирис» по вашему времени.
               </p>
               <p>
-                • <strong>Дополнительные часы:</strong> выставляем смену так, чтобы фактическое окончание совпадало с окончанием в Шерлоке (на время начала смены можно не обращать внимания).
+                • <strong>Дополнительные часы:</strong> выставляем смену так, чтобы фактическое окончание совпадало с окончанием в «Ирис» (на время начала смены можно не обращать внимания).
               </p>
             </div>
           </div>
@@ -400,11 +400,11 @@ export const CheatSheetView: React.FC = () => {
                       <span className="text-[#6B7280]">Логин:</span>
                       <div className="flex items-center gap-1.5">
                         <span className="font-mono font-bold text-[#1E201E]">{sys.loginFormat}</span>
-                        {sys.loginFormat.includes('@goldapple.ru') && (
+                        {sys.loginFormat.includes('@aurelia-corp.example') && (
                           <button
-                            onClick={() => copyText('@goldapple.ru', `${sys.id}_login`)}
+                            onClick={() => copyText('@aurelia-corp.example', `${sys.id}_login`)}
                             className="p-1 hover:bg-white rounded text-[#6B7280] hover:text-[#1E201E]"
-                            title="Скопировать @goldapple.ru"
+                            title="Скопировать @aurelia-corp.example"
                           >
                             {copiedId === `${sys.id}_login` ? (
                               <Check className="w-3.5 h-3.5 text-[#16A34A]" />
