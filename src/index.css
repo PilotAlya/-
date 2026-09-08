@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@media print {
+  /* Ensure background colors and borders are preserved during printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
